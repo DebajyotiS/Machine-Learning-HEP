@@ -42,7 +42,7 @@ conv_layers = [3]
 slow_adam = optimizers.Adam(lr= 0.0001)
 
 
-#The training and Validation data is in output0. <-- Obtained from Geant4. Reshaping the data
+#The training and Validation data is in output0. <-- Obtained from Geant4. Reshaping the data as None,9,9,1 where None is the data volume (~70K)
 data_set = np.loadtxt("output0.csv")
 (x_train, y_train) = (data_set[:,0:81],data_set[:,81])
 X_Net = x_train.reshape(x_train.shape[0],9,9,1)
